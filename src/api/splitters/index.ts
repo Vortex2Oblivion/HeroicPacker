@@ -4,6 +4,7 @@ import JsonArray from './JsonArray';
 import UIKit from './UIKit';
 import Spine from './Spine';
 import Sparrow from './Sparrow';
+import SparrowV1 from './SparrowV1';
 import Splitter, { type SplitterOptions } from './Splitter';
 import type { Rect } from 'api/types';
 import TypedObserver from 'TypedObserver';
@@ -15,6 +16,7 @@ const GridSplitter = new Grid();
 
 export const list: Splitter[] = [
 	new Sparrow(),
+	new SparrowV1(),
 	GridSplitter,
 	new JsonHash(),
 	new JsonArray(),

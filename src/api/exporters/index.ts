@@ -15,6 +15,7 @@ import * as TemplateJsonHash from './templates/JsonHash.mst';
 import * as TemplateOldCss from './templates/OldCss.mst';
 import * as TemplatePhaser3 from './templates/Phaser3.mst';
 import * as TemplateSparrow from './templates/Sparrow.mst';
+import * as TemplateSparrowV1 from './templates/SparrowV1.mst';
 import * as TemplateSpine from './templates/Spine.mst';
 import * as TemplateUIKit from './templates/UIKit.mst';
 import * as TemplateUnity3D from './templates/Unity3D.mst';
@@ -75,13 +76,22 @@ export type RenderSettings = {
 
 let list: Exporter[] = [
 	{
-		exporterName: "Sparrow",
-		description: "Sparrow format",
+		exporterName: "Sparrow V2",
+		description: "Sparrow V2 format",
 		allowTrim: true,
 		allowRotation: true,
 		template: "Sparrow.mst",
 		fileExt: "xml",
 		content: TemplateSparrow.default
+	},
+	{
+		exporterName: "Sparrow V1",
+		description: "Sparrow V1 format",
+		allowTrim: true,
+		allowRotation: true,
+		template: "SparrowV1.mst",
+		fileExt: "xml",
+		content: TemplateSparrowV1.default
 	},
 	{
 		exporterName: "JSON (hash)",

@@ -2,6 +2,7 @@ import { isAnimationJson } from "./AnimateAtlas";
 import type { Rect } from "../types";
 import type Splitter from "../splitters/Splitter";
 import Sparrow from "../splitters/Sparrow";
+import SparrowV1 from "../splitters/SparrowV1";
 import JsonHash from "../splitters/JsonHash";
 import JsonArray from "../splitters/JsonArray";
 import UIKit from "../splitters/UIKit";
@@ -50,7 +51,7 @@ export class JobError extends Error {}
 export const ATLAS_SPLITTER = "Atlas Spritemap";
 export const ANIMATION_FILE = "Animation.json";
 
-const TEXT_SPLITTERS: ReadonlyArray<Splitter> = [new Sparrow(), new UIKit(), new Spine()];
+const TEXT_SPLITTERS: ReadonlyArray<Splitter> = [new Sparrow(), new SparrowV1(), new UIKit(), new Spine()];
 const JSON_SPLITTERS: ReadonlyArray<Splitter> = [new JsonHash(), new JsonArray(), new Phaser3(), new AtlasSpritemap()];
 
 const PNG_SIGNATURE = [0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a] as const;
